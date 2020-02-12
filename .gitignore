@@ -1,15 +1,9 @@
 /.metadata/
+/패턴/
 /ERD/
 /Servers/
-/패턴/
-/servletSite/
-/board_model1/
+/.gitignore.bak
 /guest_model1/
 /jspSite/
 /shop_cart_db_model1/
 /shop_cart_session_model1/
-/user_model1/
-/user_model2/
-/servletSite/
-/.gitignore.bak
-
