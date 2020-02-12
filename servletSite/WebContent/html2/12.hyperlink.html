@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="euc-kr" />	
+	<title>hyperlink 요소 연습</title>
+	
+</head>
+<body>
+	<!-- a : 다른 페이지#특정 위치로 이동할 때 사용하는 요소 -->
+	<!-- target을 지정해서 어느 창에 보일지 선택할 수 있습니다. -->
+	<ul>
+		<li>--------절대경로[URL](http://~~)-----------</li>
+		<li> <a href="http://www.naver.com" target="_self">네이버</a> </li>
+		<li> <a href="http://www.daum.net" target="_blank">다음</a> </li>
+		<li> <a href="http://192.168.15.1/servletSite/gugudan.do" >주형구구단</a> </li>
+		<li>--------내서버 servletSite context 리소스------</li>
+		<li><a href="http://192.168.15.31/servletSite/gugudan.do" >강사구구단</a> </li>
+		<li><a href="http://192.168.15.31/servletSite/hello.do" >강사헬로우</a> </li>
+		<li><a href="http://192.168.15.31/servletSite/html2/image/penguin1.gif" >강사펭귄1</a> </li>
+		<li><a href="http://192.168.15.31/servletSite/05-03.form.html" >회원가입</a> </li>
+		<li><a href="http://192.168.15.31/servletSite/05-01.login_get.html" >로그인</a> </li>
+	</ul>
+	<ul>
+		<li>--------상대경로[http://192.168.15.31/servletSite/html2/]-----------</li>
+		<li>--------내서버 servletSite context 리소스------</li>
+		<li><a href='./11.form.html'>11.form.html</a></li>
+		<li><a href='./08.table.html'>08.table.html</a></li>
+		<li><a href='./image/penguin1.gif'>image/penguin1.gif</a></li>
+		<li><a href='image/penguin2.gif'>image/penguin2.gif</a></li>
+		<li><a href='image/penguin3.gif'>image/penguin3.gif</a></li>
+		<li><a href='../01.HelloServlet.html'>../01.HelloServlet.html</a></li>
+		<li><a href='../02.GugudanServlet.html'>../02.GugudanServlet.html</a></li>
+		<li><a href='../03.LifeCycleCounter.html'>../03.LifeCycleCounter.html</a></li>
+		<li><a href='../hello.do'>../hello.do</a></li>
+		<li><a href='../gugudan.do'>../gugudan.do</a></li>
+		<li><a href='../lifecycle.do'>../lifecycle.do</a></li>
+		<li>-----servletSite context path를 기준으로상대경로기술----</li>
+		<li><a href='/servletSite/html2/11.form.html'>/servletSite/html2/11.form.html</a></li>
+		<li><a href='/servletSite/html2/08.table.html'>/servletSite/html2/08.table.html</a></li>
+		<li><a href='/servletSite/html2/image/penguin1.gif'>/servletSite/html2/image/penguin1.gif</a></li>
+		<li><a href='/servletSite/html2/image/penguin2.gif'>/servletSite/html2/image/penguin2.gif</a></li>
+		<li><a href='/servletSite/html2/image/penguin3.gif'>/servletSite/html2/image/penguin3.gif</a></li>
+		<li><a href='/servletSite/01.HelloServlet.html'>/servletSite/01.HelloServlet.html</a></li>
+		<li><a href='/servletSite/02.GugudanServlet.html'>/servletSite/02.GugudanServlet.html</a></li>
+		<li><a href='/servletSite/03.LifeCycleCounter.html'>/servletSite/03.LifeCycleCounter.html</a></li>
+		<li><a href='/servletSite/hello.do'>/servletSite/hello.do</a></li>
+		<li><a href='/servletSite/gugudan.do'>/servletSite/gugudan.do</a></li>
+		<li><a href='/servletSite/lifecycle.do'>/servletSite/lifecycle.do</a></li>
+	</ul>
+	
+	
+	<a href="http://developer.android.com" target="_blank">안드로이드 개발자 사이트</a>
+	<br /><br />
+	<a href="http://developer.apple.com" target="_self">애플 개발자 사이트</a>
+	<br /><br />
+	<a href="http://msdn.microsoft.com">마이크로소프트 개발자 사이트</a>
+	<br /><br />
+	
+	<!-- 목적지 경로 : url#위치, 위치가 지정되지 않으면 페이지의 상단부 표시, url이 없으면 현재 페이지 -->
+	<!-- name 속성을 쓰면 위치를 표시하는 수행 (이동 X) -> #이름에 사용될 이름을 지정 -->
+	<a href="#">현재 페이지의 상단부 표시</a>
+	<br /><br />
+	<a name="top"></a>
+	<a href="#bottom">페이지 하단으로 이동</a><hr>
+	<a href="#middle">페이지 중단으로 이동</a>
+	
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<a name="middle"></a>
+	<p>난중간</p>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	
+	<a name="bottom"></a>
+	<a href="#top">페이지 상단으로 이동</a>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
