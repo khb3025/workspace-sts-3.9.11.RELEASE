@@ -1,7 +1,5 @@
 /.metadata/
 /ERD/
-/model2/
-/model2_summer/
 /Servers/
 /패턴/
 /servletSite/
@@ -14,3 +12,5 @@
 /user_model2/
 /servletSite/
 /.gitignore.bak
+/model2/
+/model2_summer/

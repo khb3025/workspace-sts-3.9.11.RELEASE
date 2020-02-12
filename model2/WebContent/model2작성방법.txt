@@ -1,0 +1,2 @@
+A.controller[서블릿]작성
+B.모든요청을 실행하도록 web.xml url-pattern mapping
