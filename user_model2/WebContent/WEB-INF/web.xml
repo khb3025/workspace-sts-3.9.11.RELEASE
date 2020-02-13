@@ -18,7 +18,7 @@
   	<servlet-class>com.itwill.summer.DispatcherServlet</servlet-class>
   	<init-param>
   		<param-name>configFile</param-name>
-  		<param-value></param-value>
+  		<param-value>/WEB-INF/user_controller_mapping.properties</param-value>
   	</init-param>
   	<load-on-startup>1</load-on-startup>
   </servlet>
