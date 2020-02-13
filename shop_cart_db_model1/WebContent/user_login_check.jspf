@@ -1,0 +1,13 @@
+<%@page import="java.net.URLEncoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	
+
+	String sUserId = (String)session.getAttribute("sUserId");
+	if(sUserId==null){
+		String returnUrl=request.getRequestURI().substring(request.getContextPath().length()+1);
+		response.sendRedirect("user_login_form.jsp?returnUrl="+URLEncoder.encode(returnUrl,"UTF-8"));
+		return;
+	}
+%>
