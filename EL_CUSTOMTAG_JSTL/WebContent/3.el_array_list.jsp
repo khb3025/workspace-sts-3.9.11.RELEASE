@@ -71,7 +71,10 @@
 		<li>-----List-----</li>
 		<li>${guestList}</li>
 		<li>${guestList[0]}</li>
-		<li>${guestList[0].guest_no}</li>
+		<li>＄{guestList[0].guest_no}   : ${guestList[0].guest_no}</li>
+		<li>＄{guestList['0'].guest_no} :${guestList['0'].guest_no}</li>
+		<li>＄{guestList["0"].guest_no} :${guestList["0"].guest_no}</li>
+		
 		<li>${guestList[0].guest_name}</li>
 		<li>${guestList[0].guest_email}</li>
 		<li>${guestList[0].guest_homepage}</li>
@@ -95,8 +98,7 @@
 			for (int i = 0; i < 3; i++) {
 				pageContext.setAttribute("i", i);
 		%>
-		<li>${guestList[i].guest_no},${guestList[i].guest_name}</li>
-
+			<li>${guestList[i].guest_no},${guestList[i].guest_name}</li>
 		<%
 			}
 		%>

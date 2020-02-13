@@ -38,9 +38,11 @@
 	--%>
 	<li>--------------Guest-----------</li>
 	<li>${guest.guest_no}</li>
+
 	<li>${guest.guest_name}</li>
 	<li>${guest.guest_email}</li>
 	<li>${guest.guest_homepage}</li>
+	<li>${guest['guest_homepage']}</li>
 	<li>-------------Student-----------</li>
 	<li>${student}</li>
 	<li>${student.no}</li>
