@@ -10,7 +10,11 @@
 	UserService userService=new UserService();
 	try{
 		userService.remove(userId);
-		response.sendRedirect("user_logout_action.jsp");
+		if(((String)session.getAttribute("sUserId")).equals(userId)){
+			response.sendRedirect("user_logout_action.jsp");
+		}else{
+			response.sendRedirect("user_list.jsp");
+		}
 	}catch(Exception e){
 		response.sendRedirect("user_error.jsp");
 	}
