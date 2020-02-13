@@ -1,3 +1,4 @@
+<%@page import="com.itwill.user.User"%>
 <%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,11 +25,16 @@
 	String msg2=(String)request.getAttribute("msg2"); 
 	if(msg2==null)msg2="";
 	
+	User fUser=(User)request.getAttribute("fUser");
+	if(fUser==null){
+		fUser=new User("","","","");
+	}
+	/*
 	String fUserId =request.getParameter("userId");
 	if(fUserId==null)fUserId="";
 	String fPassword =request.getParameter("password");
 	if(fPassword==null)fPassword="";
-	/****************************************/
+	*/
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -38,7 +44,7 @@
 <link rel=stylesheet href="css/user.css" type="text/css">
 <script type="text/javascript">
 	function userCreate() {
-		f.action = "user_write_form.jsp";
+		f.action = "user_write_form.do";
 		f.submit();
 	}
 
@@ -54,7 +60,7 @@
 			return false;
 		}
 
-		f.action = "user_login_action.jsp";
+		f.action = "user_login_action.do";
 		f.submit();
 	}
 </script>
@@ -101,13 +107,13 @@
 											아이디</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="text"
-											style="width: 150" name="userId" value="<%=fUserId%>">&nbsp;&nbsp;<font color="red"><%=msg1%></font></td>
+											style="width: 150" name="userId" value="<%=fUser.getUserId()%>">&nbsp;&nbsp;<font color="red"><%=msg1%></font></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">비밀번호</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="password"
-											style="width: 150" name="password" value="<%=fPassword%>">&nbsp;&nbsp;<font color="red"><%=msg2%></font></td>
+											style="width: 150" name="password" value="<%=fUser.getPassword()%>">&nbsp;&nbsp;<font color="red"><%=msg2%></font></td>
 									</tr>
 								</table>
 							</form> <br />
