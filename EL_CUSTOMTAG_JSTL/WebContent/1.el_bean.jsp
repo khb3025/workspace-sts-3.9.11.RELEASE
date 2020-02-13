@@ -7,11 +7,9 @@
 <%
 	Guest g=
 	new Guest(1,"KIM","2020","guard@naver.com","http://www.itwill.com","타이틀","컨텐트");	
-	
 	Student s=
 			new Student(1000,"LEE",32,new Car(111,"SONATA",null));
 	Date d=new Date();
-	
 	request.setAttribute("guest", g);
 	request.setAttribute("student", s);
 	request.setAttribute("date", d);
