@@ -38,6 +38,7 @@ public class Guest {
 	}
 
 	public int getGuest_no() {
+		//System.out.println(">>>>>>>>getGuest_no()");
 		return guest_no;
 	}
 
@@ -92,7 +93,8 @@ public class Guest {
 	public void setGuest_content(String guest_content) {
 		this.guest_content = guest_content;
 	}
-
+	
+	
 	
 	
 
